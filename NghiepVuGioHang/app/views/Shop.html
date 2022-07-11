@@ -27,12 +27,14 @@
         <nav class="container navbar navbar-expand-lg">
             <a class="navbar-brand" href="#">CyberPhone</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+                    <span class="navbar-toggler-icon"
+                        ><i class="fa fa-bars"></i
+                    ></span>
                 </button>
-            <input style="margin:0 70px ;" class="form-control form-control-dark w-100" type="text" id="search" oninput="searchSp()" placeholder="Search" aria-label="Search" />
+            <input style="margin: 0 70px" class="form-control form-control-dark w-100" type="text" id="search" oninput="searchSp()" placeholder="Search" aria-label="Search" />
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item ">
+                    <li class="nav-item">
                         <a class="nav-link" href="Seller.html">Home </a>
                     </li>
                     <li class="nav-item">
@@ -48,7 +50,12 @@
                         <a class="nav-link" href="#">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <i id="gioHang" style="font-size: 25px; color: #2a73dd;" class="fa fa-shopping-cart"></i>
+                        <a href="#" class="menu-right__item cart d-flex" data-toggle="modal" data-target="#cartModal">
+                            <i id="gioHang" style="font-size: 25px; color: #2a73dd" class="fa fa-shopping-cart"></i>
+                            <div class="menu-right__item-content ms-3">
+                                <div class="cart-number">(0)</div>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -61,71 +68,43 @@
                 <h2></h2>
             </div>
             <div class="product__content">
-                <div class="row product__content1">
-
-
-                </div>
-
+                <div id="product__content1" class="row product__content1"></div>
             </div>
         </div>
-
-
     </section>
     <footer></footer>
 
     <!-- Modal  -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+
+    <div class="modal fade" style="margin-top: 4%" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="max-width: 800px">
             <div class="modal-content">
                 <div class="modal-header">
-
-
+                    <h5 class="modal-title" id="cartModalLabel">Giỏ hàng</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
                 </div>
                 <div class="modal-body">
-                    <form class="needs-validation" id="foodForm">
-                        <div class="row">
-
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="moTa">Mô Tả</label>
-                            <textarea class="form-control" id="moTa" rows="3"></textarea>
-                            <div id="invalidMoTa" class="invalid-form"></div>
-                        </div>
-                    </form>
+                    <div class="mt-5 mb-5" style="font-size: 14px; margin-left: 300px">
+                        Chưa có gì trong giỏ hàng.
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                    Close
-                </button>
-
+                    <button type="button" class="btn btn-secondary cart-clear">
+                            Clear
+                        </button>
+                    <button type="button" class="btn btn-primary">
+                            Save changes
+                        </button>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <script type="module" src="../controllers/main.js"></script>
 </body>
-<div class="modal fade" style="margin-top: 4%" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-    <div class="modal-dialog" style="max-width: 800px;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="cartModalLabel">Giỏ hàng</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
 
-                <div class="mt-5 mb-5" style="font-size: 14px;margin-left: 300px;">Chưa có gì trong giỏ hàng.</div>
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary cart-clear">Clear</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 </html>

@@ -1,6 +1,8 @@
 .products {
     padding: 100px 0;
     .cardPhone {
+        cursor: pointer;
+        
         .cardPhone__rating {
             color: $bg-color;
         }

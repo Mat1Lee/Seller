@@ -115,10 +115,11 @@ let renderCart = () => {
     .then((result) => {
 
         if (result.length) {
-            $('#cartModal .modal-body').html('');
-            $('#cartModal .cart-total').html('');
+
             cartList.map((product, index) => {
-                $('#cartModal .modal-body').append(`
+                let content = ""
+                content +=
+                    `
                     <div class="cart-item mb-3 mt-3">
                         <div class="cart-item__img" style="background-image: url(${product.image})"></div>
                         <div class="cart-item__name ms-5 me-4">${product.name}</div>
@@ -128,7 +129,7 @@ let renderCart = () => {
                         <button class="cart-item__delete-btn btn">
                             <i class="fa-solid fa-xmark"></i>
                         </button>
-                    </div>`)
+                    </div>`
 
                 totalPay += (product.price) * product.quantity;
             })
@@ -170,3 +171,13 @@ let removeItem = (id) => {
     }
     renderUI(products);
 }
+
+
+
+let handleClick = () => {
+    let elem = document.querySelectorAll("# ");
+    console.log(elem)
+
+}
+
+handleClick();

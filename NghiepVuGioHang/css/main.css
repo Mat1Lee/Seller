@@ -131,6 +131,7 @@ header .active .nav-link::after {
     border: none;
     padding: 30px;
     margin-bottom: 30px;
+    /* cursor: pointer; */
 }
 
 .products .cardPhone .card__img {
